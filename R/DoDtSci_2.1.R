@@ -1,4 +1,12 @@
-data1 <- read.csv(url("http://stat.columbia.edu/~rachel/datasets/nyt1.csv"))
+insrcURL <- "http://stat.columbia.edu/~rachel/datasets/nyt1.csv"
+inFile <- "../downloaded/nyt1.csv"
+if (!file.exists(inFile)) {
+    download.file(insrcURL,
+                  destfile= inFile,
+                  method="auto")
+}
+#data1 <- read.csv(url("http://stat.columbia.edu/~rachel/datasets/nyt1.csv"))
+data1 <- read.csv(inFile)
 
                                         # split by age
 head(data1)
