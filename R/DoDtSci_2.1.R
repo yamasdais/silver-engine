@@ -30,10 +30,10 @@ summaryBy(Gender+Signed_In+Impressions+Clicks~agecat,
 #install.packages("ggplot2")
 library(ggplot2)
 
-ggplot(data1, aes(x = Impressions, fill = agecat))
-       +geom_histogram(binwidth = 1)
-ggplot(data1, aes(x = agecat, y = Impressions, fill = agecat))
-       +geom_boxplot()
+ggplot(data1, aes(x = Impressions, fill = agecat)
+       ) + geom_histogram(binwidth = 1)
+ggplot(data1, aes(x = agecat, y = Impressions, fill = agecat)
+       ) + geom_boxplot()
 
                                         # click through
 data1$hasimps <- cut(data1$Impressions, c(-Inf, 0, Inf))
