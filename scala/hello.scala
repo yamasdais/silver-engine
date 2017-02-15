@@ -1,7 +1,9 @@
 object Hello extends App {
   val you: Option[String] = args match {
-    case Array() => None
-    case _ => Some(args(0))
+    case Array(a, _*) =>
+      Some(a)
+    case _ =>
+      None
   }
   //  if (args.isEmpty) None
   //  else Some(args(0))
@@ -9,7 +11,7 @@ object Hello extends App {
 
   // option for
   you.foreach{
-    o => println(s"""Hey, ${o}!!""")
+    o => println(s"Hey, ${o}!!")
   }
 
   // for expression
@@ -18,7 +20,7 @@ object Hello extends App {
     targ <- args
     if !targ.equals("boo")
   ) {
-    if (cnt != 0) println(s"""Hi, ${targ}!""")
+    if (cnt != 0) println(s"Hi, ${targ}!")
     cnt = cnt + 1
   }
 }
