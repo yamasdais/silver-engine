@@ -1,7 +1,10 @@
 object Hello extends App {
-  val you: Option[String] =
-    if (args.isEmpty) None
-    else Some(args(0))
+  val you: Option[String] = args match {
+    case Array() => None
+    case _ => Some(args(0))
+  }
+  //  if (args.isEmpty) None
+  //  else Some(args(0))
   println(s"""Hello, ${you.getOrElse("World")}!""")
 
   // option for
