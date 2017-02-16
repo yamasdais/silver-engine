@@ -6,7 +6,7 @@ class ChecksumAccumulator {
 
 import scala.collection.mutable;
 
-// companion object
+// companion object のサンプル
 // クラス定義と同じソースファイルに実装しなければならない
 // 自動生成クラス(synthetic class)のインスタンスとなる
 object ChecksumAccumulator {
