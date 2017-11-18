@@ -1,3 +1,5 @@
 *~
 downloaded/*
 !.gitkeep
+.ipynb_checkpoints
+R/.Rhistory
